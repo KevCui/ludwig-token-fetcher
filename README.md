@@ -1,4 +1,4 @@
-#ludwig-token-fetcher
+# ludwig-token-fetcher
 
 A [Puppetteer](https://github.com/GoogleChrome/puppeteer) script to get Ludwig token.
 
