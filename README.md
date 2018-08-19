@@ -4,7 +4,7 @@ A [Puppeteer](https://github.com/GoogleChrome/puppeteer) script to fetch Ludwig 
 
 ### How to use
 
-- Install Puppetteer
+- Install Puppeteer
 ```
 npm i puppeteer
 npm install
