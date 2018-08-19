@@ -1,6 +1,6 @@
 # ludwig-token-fetcher
 
-A [Puppetteer](https://github.com/GoogleChrome/puppeteer) script to get Ludwig token.
+A [Puppeteer](https://github.com/GoogleChrome/puppeteer) script to fetch Ludwig token.
 
 ### How to use
 
@@ -12,11 +12,11 @@ npm install
 
 - Change path of Chrome/Chromium in index.js
 
-- Run command to get token
+- Run command to fetch token
 ```
 node index.js
 ```
-- More token?
+- Need more token?
 ```
 for ((i = 0; i < 20; i++)); do echo $i; node index.js >> auth.conf; done
 ```
