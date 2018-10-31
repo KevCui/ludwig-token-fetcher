@@ -1,0 +1,25 @@
+{
+  "name": "ludwig-token-fetcher",
+  "version": "1.0.0",
+  "description": "A [Puppeteer](https://github.com/GoogleChrome/puppeteer) script to fetch Ludwig token.",
+  "main": "index.js",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "puppeteer": "^1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/KrazyCavin/ludwig-token-fetcher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/KrazyCavin/ludwig-token-fetcher/issues"
+  },
+  "homepage": "https://gitlab.com/KrazyCavin/ludwig-token-fetcher#readme"
+}
