@@ -1,20 +1,24 @@
-const puppeteer = require('puppeteer')
-const atob = require('atob')
+const puppeteer = require('puppeteer');
+const atob = require('atob');
 
-var chrome = '/usr/bin/chromium'
-var isheadless = true
+(async () => {
+  const num = process.argv[2] || 1;
+  const isheadless = true;
+  const chrome = '/usr/bin/chromium';
 
-puppeteer
-  .launch({ executablePath: chrome, headless: isheadless })
-  .then(async browser => {
-    const page = await browser.newPage()
+  const browser = await puppeteer.launch({executablePath: chrome, headless: isheadless});
+  for (i = 0; i < num; i++) {
+    const context = await browser.createIncognitoBrowserContext();
+    const page = await context.newPage();
+    await page.goto('https://ludwig.guru/s/ludwig', {timeout: 10000, waitUntil: 'domcontentloaded'});
 
-    await page.goto('https://ludwig.guru/s/ludwig')
     let cookie = await page.cookies()
-
     let jwt = cookie.filter(c => c['name'] === '_ljwt')
     let json = JSON.parse(atob(jwt[0]['value']))
 
     console.log(json['token'])
-    await browser.close()
-  })
+    await context.close()
+  }
+
+  await browser.close()
+})();

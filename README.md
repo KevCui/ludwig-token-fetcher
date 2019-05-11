@@ -18,5 +18,5 @@ node index.js
 ```
 - Need more token?
 ```
-for ((i = 0; i < 20; i++)); do echo $i; node index.js >> auth.conf; done
+node index.js 20
 ```
